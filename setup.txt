@@ -5,3 +5,4 @@ Go to C:/ -> MinGW -> bin - copy the bin directory path
 Go to windows Environmental variables -> select path -> click Edit -> click NEW -> paste the bin path you copied
 
 Go to your IDE and create a workspace, then create and save a file with cpp extention - write a cpp program code and running
+To run the program in terminal (SO that we can also give our inputs which is not posssible in output terminal in vscode) -> go to settings -> search 'terminal' -> click "Rum code configuration" at left menu -> check the "Code-runner: Run In Terminal" box.
