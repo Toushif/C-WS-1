@@ -1,0 +1,1 @@
+In VS Code install extentions - C/C++ by Microsoft and Code Runner for running the cpp Code
