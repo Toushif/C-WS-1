@@ -23,5 +23,16 @@ int main() {
 
     int B[10] = {2,7,4,8,6}; // Here array B is initialized as an array of size 10 but only has 5 values, so the rest of the values from index 5 to 9 will be 0 by default. If an array is not initiaized at all then by default the values will be random or garbage values.
 
+    // For loops in cpp-
+    for (int i = 0; i < sizeof(B)/sizeof(B[0]); i++)
+    {
+        cout << B[i] << endl;
+    }
+    cout << endl;
+    // For-each loops in cpp-
+    for(int i:A) {
+        cout << i << endl;
+    }
+
     return 0;
 }
