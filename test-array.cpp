@@ -24,6 +24,16 @@ int main() {
     for(int i:A) {
         cout << i << endl;
     }
+    cout << endl;
+
+    // Dynamic array size input -
+    int n;
+    cout << "Enter the size of the array-" << endl;
+    cin >> n;
+    int C[n] = {1,2,3}; // In most compiler this initialization migth not work (only declaration), so in that case we need to initialize individually using indeces.
+    for(int i:C) {
+        cout << i << endl;
+    }
 
     return 0;
 }
