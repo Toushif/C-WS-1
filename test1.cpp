@@ -18,6 +18,7 @@ int main() {
     cout << sizeof(A) << endl;
     cout << "A[0] is " << A[0] << endl;
     cout << "A[2] is " << A[2] << endl;
+    printf("%d\n", A[1]); //C code will also work in a C++ code
 
     return 0;
 }
