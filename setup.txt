@@ -1,1 +1,6 @@
 In VS Code install extentions - C/C++ by Microsoft and Code Runner for running the cpp Code
+
+Download cpp compiler - MinGW from Google
+Go to C:/ -> MinGW -> bin - copy the bin directory path
+Go to windows Environmental variables -> select path -> click Edit -> click NEW -> paste the bin path you copied
+
