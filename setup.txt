@@ -4,3 +4,4 @@ Download cpp compiler - MinGW from Google
 Go to C:/ -> MinGW -> bin - copy the bin directory path
 Go to windows Environmental variables -> select path -> click Edit -> click NEW -> paste the bin path you copied
 
+Go to your IDE and create a workspace, then create and save a file with cpp extention - write a cpp program code and running
