@@ -6,5 +6,12 @@
 using namespace std;
 
 int main() {
+    int a = 10;
+    int *p;
+    p = &a;
+    printf("%d", p);
+    printf("\n");
+    printf("%d", *p);
     
+    return 0;
 }
