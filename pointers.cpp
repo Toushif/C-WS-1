@@ -7,6 +7,11 @@
 #include <stdlib.h> // For using C lang malloc function
 using namespace std;
 
+struct Rectangle {
+    int length;
+    int breadth;
+};
+
 int main() {
     int a = 10;
     int *p; // declaring a pointer
@@ -41,12 +46,25 @@ int main() {
     for(int i = 0; i < 5; i++)
     cout << c[i] << endl;
 
+    int *p1;
+    char *p2;
+    float *p3;
+    double *p4;
+    struct Rectangle *p5;
+
+    // Size of all the above pointers of different types will be same, that is 4 or 8 bytes depending on the compiler.
+    cout << sizeof(p1) << endl;
+    cout << sizeof(p2) << endl;
+    cout << sizeof(p3) << endl;
+    cout << sizeof(p4) << endl;
+    cout << sizeof(p5) << endl;
+
     // Release memory or de-allocate memory in heap after using it
     // In C lang -
     free(b);
     // In cpp-
     delete [] c; // For deleting array in memory we have to use '[]', but any other primitive variable we just write 'delete x'
     delete p;
-    
+
     return 0;
 }
