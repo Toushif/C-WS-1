@@ -3,6 +3,7 @@
 // It is also used for passing the parameters.
 
 #include <iostream>
+#include <stdio.h> // when using C lang library
 using namespace std;
 
 int main() {
