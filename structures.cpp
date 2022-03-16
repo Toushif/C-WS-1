@@ -17,6 +17,11 @@ struct Card {
 // Here above the shape is the shape of the card from 0 to 3 (clubs, spades, diamonds, hearts)
 // Here above the color is the color of the card - either black (0) or red (1)
 
+struct Triangle {
+    int base;
+    int hypotenuse;
+} t1, t2, t3; // You can declare global variables along with defining the structures - these global variables will e found throughout all the functions
+
 int main() {
     // Declaration of a structure
     // struct Rectangle r;
@@ -29,7 +34,7 @@ int main() {
     struct Card c = {1,0,0}; // black club of value A
 
     // Declaring and initializing an array of cards
-    struct Card deck[52] = {{1,0,0}, {2,0,0}} //so on and so forth...
+    struct Card deck[52] = {{1,0,0}, {2,0,0}}; //so on and so forth...
 
     return 0;
 }
