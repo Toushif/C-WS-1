@@ -12,7 +12,9 @@ int main() {
     p = &a; // initiazing a pointer - here we are storing the address of data variable a
     printf("%d", p); // value of the address of a stored in p
     printf("\n");
-    printf("%d", *p); // de-referencing a pointer - getting the value of a using pointers
+    printf("%d", &a); // value of the address of a same as above
+    printf("\n");
+    printf("%d", *p); // de-referencing a pointer - getting the value of 'a' using pointers
 
     // Allocate memory in Heap memory manually-
     // In C lang -
@@ -20,6 +22,10 @@ int main() {
 
     // In cpp -
     int *y = new int[5];
+
+    int A[5] = {1,2,3,4,5};
+    int *b;
+    b = A; // Here when we are initializing the pointer b to store the address of the array A, then we do not need '&', coz array themselves point to the first variable in address
     
     return 0;
 }
