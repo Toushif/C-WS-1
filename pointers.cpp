@@ -12,6 +12,13 @@ int main() {
     printf("%d", p); // value of the address of a stored in p
     printf("\n");
     printf("%d", *p); // de-referencing a pointer - getting the value of a using pointers
+
+    // Allocate memory in Heap memory manually-
+    // In C lang -
+    int *x = (int *)malloc(5*sizeof(int)); 
+
+    // In cpp -
+    int *y = new int[5];
     
     return 0;
 }
