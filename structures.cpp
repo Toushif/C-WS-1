@@ -20,6 +20,7 @@ struct Card {
 struct Triangle {
     int base;
     int hypotenuse;
+    char x;
 } t1, t2, t3; // You can declare global variables along with defining the structures - these global variables will e found throughout all the functions
 
 int main() {
@@ -29,12 +30,17 @@ int main() {
     // Initialization of a structure
     struct Rectangle r = {10,6};
     printf("Area of the Rectangle is %d", r.length * r.breadth);
+    printf("\n");
 
     // Declaring and initializing a single card
     struct Card c = {1,0,0}; // black club of value A
 
     // Declaring and initializing an array of cards
     struct Card deck[52] = {{1,0,0}, {2,0,0}}; //so on and so forth...
+
+    t1 = {4,6};
+    printf("%lu", sizeof(t1)); // output is 12 instead of 9 (4+4+1 (char takes 1 byte)) coz for easy accessibility purpose, the compiler allocates 4 bytes to char while defining structures. This is called PADDING. So inside structres padding of memory is done so that it is easy for the processor to read that structure at once.
+    // lu stands for long unsigned, d is for int.
 
     return 0;
 }
