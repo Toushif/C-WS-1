@@ -7,11 +7,11 @@ using namespace std;
 
 int main() {
     int a = 10;
-    int *p;
-    p = &a;
-    printf("%d", p);
+    int *p; // declaring a pointer
+    p = &a; // initiazing a pointer - here we are storing the address of data variable a
+    printf("%d", p); // value of the address of a stored in p
     printf("\n");
-    printf("%d", *p);
+    printf("%d", *p); // de-referencing a pointer - getting the value of a using pointers
     
     return 0;
 }
