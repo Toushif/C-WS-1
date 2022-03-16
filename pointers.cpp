@@ -26,6 +26,7 @@ int main() {
     int A[5] = {1,2,3,4,5};
     int *b;
     b = A; // Here when we are initializing the pointer b to store the address of the array A, then we do not need '&', coz array themselves point to the first variable in address
+    //b = &A[2] // If we want to store individual element address in an array
     
     return 0;
 }
