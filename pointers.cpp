@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <stdio.h> // when using C lang library
+#include <stdlib.h> // For using C lang malloc function
 using namespace std;
 
 int main() {
@@ -30,6 +31,15 @@ int main() {
     cout<<endl;
     for(int i = 0; i < 5; i++)
     cout << b[i] << endl; //Here also we dont need to use *b while de-referencing in the case of an array
+
+    // Using pointers to create array in heap -
+    int *c = new int[5];
+    c[0]=2;
+    c[1]=4;
+    c[2]=6;
+    c[3]=8;
+    for(int i = 0; i < 5; i++)
+    cout << c[i] << endl;
     
     return 0;
 }
