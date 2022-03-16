@@ -41,11 +41,12 @@ int main() {
     for(int i = 0; i < 5; i++)
     cout << c[i] << endl;
 
-    // Release memory after using it
+    // Release memory or de-allocate memory in heap after using it
     // In C lang -
     free(b);
     // In cpp-
     delete [] c; // For deleting array in memory we have to use '[]', but any other primitive variable we just write 'delete x'
+    delete p;
     
     return 0;
 }
