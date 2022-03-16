@@ -27,6 +27,9 @@ int main() {
     int *b;
     b = A; // Here when we are initializing the pointer b to store the address of the array A, then we do not need '&', coz array themselves point to the first variable in address
     //b = &A[2] // If we want to store individual element address in an array
+    cout<<endl;
+    for(int i = 0; i < 5; i++)
+    cout << b[i] << endl; //Here also we dont need to use *b while de-referencing in the case of an array
     
     return 0;
 }
