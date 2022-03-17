@@ -21,7 +21,7 @@ void changeLength(struct Rectangle *R, int l) {
 }
 
 int main() {
-    struct Rectangle r;
+    struct Rectangle r = {0, 0};
 
     initialize(&r, 10, 6);
     int a = area(r);
@@ -32,11 +32,46 @@ int main() {
     return 0;
 } */
 
+// Same above Program Cpp object orient style-
+/* #include <iostream>
+using namespace std;
+
+struct Rectangle {
+    int length;
+    int breadth;
+
+    void initialize(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    int area() {
+        return length * breadth;
+    }
+
+    void changeLength(int l) {
+        length = l;
+    }
+};
+
+
+int main() {
+    struct Rectangle r = {0, 0};
+
+    r.initialize(10, 6);
+    int a = r.area();
+    r.changeLength(12);
+
+    cout << "Area is " << a << endl << "Length is " << r.length << endl;
+
+    return 0;
+} */
+
 // Same program example using C++ object oriented style of programming using classes -
 #include <iostream>
 using namespace std;
 
-class Rectangle {
+class Rectangle { // in place of class you can also use struct, it will still work in cpp
     private: int length;
     private: int breadth;
 
@@ -46,10 +81,10 @@ class Rectangle {
     };
 
     // Separate initialize function when you dont want to initialize in constructor above
-    /* public: void initialize(int l, int b) {
-        length = l;
-        breadth = b;
-    } */
+    // public: void initialize(int l, int b) {
+    //     length = l;
+    //     breadth = b;
+    // }
 
     public: int area() {
         return length * breadth;
