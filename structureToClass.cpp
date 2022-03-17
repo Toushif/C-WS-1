@@ -71,7 +71,8 @@ int main() {
 #include <iostream>
 using namespace std;
 
-class Rectangle { // in place of class you can also use struct, it will still work in cpp
+class Rectangle { // in place of class you can also use struct, it will still work in cpp like above. In struct everything inside is public, whereas in class everything inside is private
+// public: // you can write public or private here in the beginning to make evrything that follows public or private.
     private: int length;
     private: int breadth;
 
