@@ -49,8 +49,14 @@ int area(struct Rectangle R) { // Passing structures in functions as value
     return R.length * R.breadth;
 }
 
-int area2(struct Rectangle R) { // Passing structures in functions as call by Reference
+int area2(struct Rectangle &R) { // Passing structures in functions as call by Reference
+// But here as we know by call by reference, any variable modified will also change the original data
+    R.length++;
     return R.length * R.breadth;
+}
+
+void changeLength(struct Rectangle *R, int l) { // Passing structures in functions as call by Address
+    R->length = l;
 }
 
 int main() {
@@ -90,8 +96,15 @@ int main() {
     // Passing strutures as parameters -
     printf("Passing strutures as parameters -\n");
     struct Rectangle r = {10, 5};
-    int a = area(r);
-    cout << a << endl;
+    int a1 = area(r);
+    cout << a1 << endl;
+    int a2 = area2(r);
+    cout << a2 << endl;
+
+    int newLength = 20;
+    changeLength(&r, newLength); // Modifies the length of the Rectangle length by passing structure as call by address
+    int a3 = area(r);
+    cout << a3 << endl;
 
     return 0;
 }
