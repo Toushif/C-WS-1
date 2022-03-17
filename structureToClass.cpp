@@ -57,9 +57,11 @@ class Rectangle {
 int main() {
     Rectangle r(10, 6);
     int a  = r.area();
-    r.changeLength(12);
-
     cout << "Area is " << a << endl;
+    r.changeLength(12);
+    int a2  = r.area();
+    cout << "New area is " << a2 << endl;
+
 
     return 0;
 }
