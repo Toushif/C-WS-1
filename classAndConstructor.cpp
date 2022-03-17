@@ -34,8 +34,8 @@ class Rectangle {
         int getBreadth() {
             return breadth;
         }
-        ~Rectangle() {
-            cout << "Rectangle object as been destroyed" << endl;
+        ~Rectangle() { // Destuctor function at the end of the class is called to destroy the object from memory
+            cout << "Rectangle object has been destroyed" << endl;
         }
 };
 
