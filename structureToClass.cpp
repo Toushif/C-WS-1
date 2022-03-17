@@ -45,6 +45,7 @@ class Rectangle {
         breadth = b;
     };
 
+    // Separate initialize function when you dont want to initialize in constructor above
     /* public: void initialize(int l, int b) {
         length = l;
         breadth = b;
