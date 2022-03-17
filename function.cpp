@@ -28,6 +28,18 @@ void fun2(int A[], int n) { // You also cannot use for each loop inside this fun
     }
 }
 
+int * fun3(int size) { //  In this fucntion we are just passing the size of the array. The array is created inside this function and it returns a pointer ot the array
+    int *p;
+    p = new int[size];
+
+    for (int i = 1; i <= size; i++)
+    {
+        p[i] = i * 2;
+    }
+    
+    return p;
+}
+
 int main() {
     // int x, y, z;
     // x = 10;
@@ -43,8 +55,7 @@ int main() {
     // cout << "x is " << x << endl << "y is " << y << endl;
 
     // Passing Array as parameters
-    int A1[] = {2,4,6,8,10};
-    int n = 5;
+    int A1[] = {2,4,6,8,10}, n = 5;
     fun1(A1);
     fun2(A1, n);
 
@@ -53,6 +64,10 @@ int main() {
     for(int x:A1) {
         cout << x << endl;
     }
+
+    int *ptr, size = 7;
+    ptr = fun3(size);
+
 
     return 0;
 }
