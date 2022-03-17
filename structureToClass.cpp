@@ -40,10 +40,15 @@ class Rectangle {
     private: int length;
     private: int breadth;
 
-    public: Rectangle(int l, int b) {
+    public: Rectangle(int l, int b) { // This is a constructor function to initialize directly upon declaration and no need of separate initialize function
         length = l;
         breadth = b;
     };
+
+    /* public: void initialize(int l, int b) {
+        length = l;
+        breadth = b;
+    } */
 
     public: int area() {
         return length * breadth;
