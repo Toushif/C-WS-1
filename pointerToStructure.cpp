@@ -21,6 +21,5 @@ int main() {
     p2 = new Rectangle;
     printf("%d", sizeof(p2));
 
-
     return 0;
 }
