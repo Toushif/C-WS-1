@@ -39,3 +39,10 @@ class Rectangle {
         }
 };
 
+int main() {
+    Rectangle r(12, 8);
+
+    cout << "Area is " << r.area() << endl << "Perimeter is " << r.perimeter() << endl;
+
+    return 0;
+}
