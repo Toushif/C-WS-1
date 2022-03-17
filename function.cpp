@@ -40,6 +40,15 @@ int * fun3(int size) { //  In this fucntion we are just passing the size of the 
     return p;
 }
 
+struct Rectangle {
+    int length;
+    int breadth;
+};
+
+int area(struct Rectangle R) {
+    return R.length * R.breadth;
+}
+
 int main() {
     int x, y, z;
     x = 10;
@@ -55,6 +64,7 @@ int main() {
     cout << "x is " << x << endl << "y is " << y << endl;
 
     // Passing Array as parameters
+    printf("Passing Arrays as parameters -\n");
     int A1[] = {2,4,6,8,10}, n = 5;
     fun1(A1);
     fun2(A1, n);
@@ -72,6 +82,12 @@ int main() {
     {
         cout << ptr[i] << endl;
     }
+
+    // Passing strutures as parameters -
+    printf("Passing strutures as parameters -\n");
+    struct Rectangle r = {10, 5};
+    int a = area(r);
+    cout << a << endl;
 
     return 0;
 }
