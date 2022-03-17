@@ -62,6 +62,5 @@ int main() {
     int a2  = r.area();
     cout << "New area is " << a2 << endl;
 
-
     return 0;
 }
