@@ -19,7 +19,7 @@ void swap2(int &a, int &b) {
 };
 
 void fun1(int A[]) { // When you pass an array in a function, then the array is passed as a pointer pointing to the first elements's address in memory, so the size of array info is lost. 
-    cout << sizeof(A)/sizeof(int) << endl;
+    cout << sizeof(A)/sizeof(int) << endl; // This will throw warning for the above reason.
 }
 
 void fun2(int A[], int n) { // You also cannot use for each loop inside this function on 'A' coz A is a pointer and not an array. You have to use traditional for loop.
@@ -34,25 +34,25 @@ int * fun3(int size) { //  In this fucntion we are just passing the size of the 
 
     for (int i = 1; i <= size; i++)
     {
-        p[i] = i * 2;
+        p[i-1] = i * 2;
     }
     
     return p;
 }
 
 int main() {
-    // int x, y, z;
-    // x = 10;
-    // y = 5;
-    // z = add(x, y); // call by Value
+    int x, y, z;
+    x = 10;
+    y = 5;
+    z = add(x, y); // call by Value
 
-    // cout << z << endl;
+    cout << z << endl;
 
-    // swap1(&x, &y); // call by Address
-    // cout << "x is " << x << endl << "y is " << y << endl;
+    swap1(&x, &y); // call by Address
+    cout << "x is " << x << endl << "y is " << y << endl;
 
-    // swap2(x, y); // call by Reference
-    // cout << "x is " << x << endl << "y is " << y << endl;
+    swap2(x, y); // call by Reference
+    cout << "x is " << x << endl << "y is " << y << endl;
 
     // Passing Array as parameters
     int A1[] = {2,4,6,8,10}, n = 5;
@@ -68,6 +68,10 @@ int main() {
     int *ptr, size = 7;
     ptr = fun3(size);
 
+    for (int i = 0; i < size; i++)
+    {
+        cout << ptr[i] << endl;
+    }
 
     return 0;
 }
