@@ -22,11 +22,11 @@ int main() {
     int x, y, z;
     x = 10;
     y = 5;
-    z = add(x, y); // call by value
+    z = add(x, y); // call by Value
 
     cout << z << endl;
 
-    swap1(&x, &y); // call by address
+    swap1(&x, &y); // call by Address
     cout << "x is " << x << endl << "y is " << y << endl;
 
     swap2(x, y); // call by Reference
