@@ -59,6 +59,16 @@ void changeLength(struct Rectangle *R, int l) { // Passing structures in functio
     R->length = l;
 }
 
+struct Rectangle * fun4() { // a function of type Rectangle structure/object
+    struct Rectangle *p;
+    p = new Rectangle;
+
+    p->length = 15;
+    p->breadth = 8;
+
+    return p;
+}
+
 int main() {
     int x, y, z;
     x = 10;
@@ -105,6 +115,9 @@ int main() {
     changeLength(&r, newLength); // Modifies the length of the Rectangle length by passing structure as call by address
     int a3 = area(r);
     cout << a3 << endl;
+
+    struct Rectangle *ptr2 = fun4();
+    cout << ptr2->length << endl;
 
     return 0;
 }
