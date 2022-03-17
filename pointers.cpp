@@ -27,7 +27,7 @@ int main() {
     int *x = (int *)malloc(5*sizeof(int)); 
 
     // In cpp -
-    int *y = new int[5];
+    int *y = new int[5]; // here we are allocating memory of 5*4 = 20 bytes in the heap memory, whose address will be stored in the y pointer. 
 
     int A[5] = {1,2,3,4,5};
     int *b;

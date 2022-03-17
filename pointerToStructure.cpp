@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 struct Rectangle {
@@ -13,6 +14,13 @@ int main() {
     (*p).length = 20; // Here we are modifying the length of r using pointer. This is the syntax for de-referencing and assigning for pointer to structure
     p->length = 22; // This is the shortcut syntax to the above same operation.
     cout << r.length << endl; // 22
+
+    // Now the pointer p2 will point to the dynamically allocate memory in the heap for the object and do the same thing as above-
+    struct Rectangle *p2;
+    // p2 = (struct Rectangle *)malloc(sizeof(struct Rectangle)); // in C lang
+    p2 = new Rectangle;
+    printf("%d", sizeof(p2));
+
 
     return 0;
 }
