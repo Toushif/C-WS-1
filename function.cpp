@@ -12,7 +12,7 @@ void swap1(int *a, int *b) {
     *b = temp;
 };
 
-void swap2(int &a, int &b) {
+void swap2(int &a, int &b) { // In call by reference the function called (swap2) isnt a separate block of code, but it is treated like an inline code as if this function is pasted in the main function from where it is called, coz in call by reference the arguments in the called function does not create separate memory in heap, it points to the same address like the variable it is assigned to. So, calling a function by reference puts the function back to the main function from where it is called, and that way the this swap2 fucntion has access to the varible without creating a new one. So anything modified in this function will alter the original data coz it's the same data variable as discussed. 
     int temp = a;
     a = b;
     b = temp;
@@ -45,7 +45,11 @@ struct Rectangle {
     int breadth;
 };
 
-int area(struct Rectangle R) {
+int area(struct Rectangle R) { // Passing structures in functions as value
+    return R.length * R.breadth;
+}
+
+int area2(struct Rectangle R) { // Passing structures in functions as call by Reference
     return R.length * R.breadth;
 }
 
