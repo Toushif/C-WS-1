@@ -57,4 +57,38 @@ class Arithmetic {
         Arithmetic(T l, T b);
         T add();
         T sub();
+        ~Arithmetic();
 };
+
+template <class T>
+Arithmetic<T>::Arithmetic(T l, T b) {
+    this->l = l;
+    this->b = b;
+};
+
+template <class T>
+T Arithmetic<T>::add() {
+    return l + b;
+};
+
+template <class T>
+T Arithmetic<T>::sub() {
+    return l - b;
+};
+
+template <class T>
+Arithmetic<T>::~Arithmetic() {
+    cout << "Arithmetic object has been destroyed successfully." << endl;
+};
+
+int main() {
+    Arithmetic<float> af(10.5, 6.2);
+    cout << af.add() << endl;
+    cout << af.sub() << endl;
+    
+    Arithmetic<int> ai(10, 6);
+    cout << ai.add() << endl;
+    cout << ai.sub() << endl;
+
+    return 0;
+}
