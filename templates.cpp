@@ -1,6 +1,7 @@
 // A template is an outer skeleton of a class which can be re-used multiple times for different data types. Just like generics in TypeScript.
 
-#include <iostream>
+// This is a normal cpp class of type int. 
+/* #include <iostream>
 using namespace std;
 
 class Arithmetic {
@@ -40,4 +41,20 @@ int main() {
     cout << ar.sub() << endl;
 
     return 0;
-}
+} */
+
+// Now the same above code written in generic style using template classes so that we can re-use the Arithmetic class not just for int type but also for float, double, long, etc.
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Arithmetic {
+    private:
+        T l;
+        T b;
+    
+    public:
+        Arithmetic(T l, T b);
+        T add();
+        T sub();
+};
