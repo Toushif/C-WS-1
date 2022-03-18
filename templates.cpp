@@ -90,5 +90,9 @@ int main() {
     cout << ai.add() << endl;
     cout << ai.sub() << endl;
 
+    Arithmetic<char> ac('A', 'B');
+    cout << (int)ac.add() << endl;
+    cout << (int)ac.sub() << endl;
+
     return 0;
 }
